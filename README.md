@@ -25,7 +25,7 @@ This project applies unsupervised machine learning to group days and cities base
 
 - **Best model**: **Agglomerative Hierarchical Clustering** (ward linkage, 4 clusters)  
   → Manually trained & tuned each model one by one: K-Means, DBSCAN, Agglomerative, GMM  
-  → Compared using silhouette score (~0.51–0.57 best), Davies-Bouldin, PCA/t-SNE visuals, and domain meaning (seasonal/city patterns)  
+  → Compared using silhouette score (~0.81 best), Davies-Bouldin, PCA visuals, and domain meaning (seasonal/city patterns)  
   → Agglomerative won: highest score, clear dendrogram hierarchy, no spherical assumption, robust to skewed data
 
 ### Main Results
