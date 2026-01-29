@@ -36,7 +36,7 @@ This project applies unsupervised machine learning to group days and cities base
 ### Notebook Structure
 - Data loading & exploration (skew, boxplots → confirmed need for MinMax)
 - Preprocessing (missing values, MinMaxScaler)
-- Dimensionality reduction (PCA/t-SNE)
+- Dimensionality reduction (PCA)
 - Model comparison & tuning (manual)
 - Final clustering with Agglomerative
 - Interpretation: seasonal & city-wise cluster distribution
