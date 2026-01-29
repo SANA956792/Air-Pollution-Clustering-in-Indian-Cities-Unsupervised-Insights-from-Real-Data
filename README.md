@@ -1,4 +1,4 @@
-# 🌫️ Air Pollution Clustering in Indian Cities 
+# 🌫️ Air Pollution Clustering in Indian Cities
 
 **Unsupervised Learning Project** to discover hidden air pollution patterns across Indian cities using real daily data — **no AQI labels used**.
 
@@ -20,13 +20,13 @@ This project applies unsupervised machine learning to group days and cities base
 ### Key Decisions & Why
 - **Scaler chosen**: **MinMaxScaler** (applied directly on raw data)  
   → Data has very high skew (most > 2–5, some > 10–23) and many extreme high values (real severe pollution events).  
-  → MinMax keeps these extremes strong → better cluster separation (higher silhouette score).  
-  → StandardScaler / RobustScaler / outlier removal → flattens important tails → worse results.
+  → MinMax keeps these extremes strong → excellent cluster separation (silhouette ~0.8).  
+  → StandardScaler / RobustScaler / outlier removal → flattens important tails → much worse results.
 
 - **Best model**: **Agglomerative Hierarchical Clustering** (ward linkage, 4 clusters)  
   → Manually trained & tuned each model one by one: K-Means, DBSCAN, Agglomerative, GMM  
-  → Compared using silhouette score (~0.81 best), Davies-Bouldin, PCA visuals, and domain meaning (seasonal/city patterns)  
-  → Agglomerative won: highest score, clear dendrogram hierarchy, no spherical assumption, robust to skewed data
+  → Compared using silhouette score (~0.8 best), Davies-Bouldin score (~0.3 best – lower is better), PCA visuals, and domain meaning (seasonal/city patterns)  
+  → Agglomerative won: outstanding silhouette (~0.8), very low Davies-Bouldin (~0.3), clear dendrogram hierarchy, no spherical assumption, robust to skewed data
 
 ### Main Results
 - Clear separation of **severe pollution** (winter, northern cities) vs. **moderate** vs. **clean** (monsoon, southern/coastal)
@@ -40,9 +40,3 @@ This project applies unsupervised machine learning to group days and cities base
 - Model comparison & tuning (manual)
 - Final clustering with Agglomerative
 - Interpretation: seasonal & city-wise cluster distribution
-
-### How to Run
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/air-pollution-clustering.git
-   cd air-pollution-clustering
